@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #7a7a7a;
+  /* //background-image: url("http://localhost:3000/static/media/cryptocurrency.a292dc2f.jpg"); */
+  background-color: #cccccc;
+}
