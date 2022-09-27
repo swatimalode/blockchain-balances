@@ -6,7 +6,7 @@ const HeaderLayout = () => {
   return (
     <Fragment>
       <header className={classes.header}>
-        <h2>Know Your Balance</h2>
+        <h2>Know Your Crypto-Balance</h2>
       </header>
       <div className={classes["main-image"]}>
         <img src={cryptoImage} alt="crypto-currency" />

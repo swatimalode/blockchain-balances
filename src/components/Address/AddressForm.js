@@ -230,8 +230,7 @@ const AddressForm = () => {
       {isShow && (
         <Fragment>
           <label className={classes.output_label}>
-            {" "}
-            BALANCES OF {walletAddress}
+            BALANCES
           </label>
           <div className={classes.output}>
             <Cart label={"ETHEREUM"}>{ethereumList(walletAddress)}</Cart>
