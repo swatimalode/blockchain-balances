@@ -1,5 +1,5 @@
 import classes from "./HeaderLayout.module.css";
-import cryptoImage from "../../assets/cryptocurrency.jpg"
+import cryptoImage from "../../assets/cryptocurrency.jpg";
 import { Fragment } from "react";
 
 const HeaderLayout = () => {
@@ -8,7 +8,7 @@ const HeaderLayout = () => {
       <header className={classes.header}>
         <h2>Know Your Balance</h2>
       </header>
-      <div className={classes['main-image']}>
+      <div className={classes["main-image"]}>
         <img src={cryptoImage} alt="crypto-currency" />
       </div>
     </Fragment>

@@ -7,5 +7,4 @@ const Cart = (props) => {
         {props.children}
     </div>)
 }
-
 export default Cart;

@@ -30,7 +30,15 @@ const AddressForm = () => {
           `43114/address/${address}/balances_v2/?key=ckey_170bf62322044e829af0f052b6e`,
         method: "GET",
       });
-      let array = result.data.data.items.slice().filter((a) => a.contract_ticker_symbol === 'AVAX').concat(result.data.data.items.slice(1).sort((a, b) => b.balance - a.balance).filter((a) => a.contract_ticker_symbol !=='AVAX'));
+      let array = result.data.data.items
+        .slice()
+        .filter((a) => a.contract_ticker_symbol === "AVAX")
+        .concat(
+          result.data.data.items
+            .slice(1)
+            .sort((a, b) => b.balance - a.balance)
+            .filter((a) => a.contract_ticker_symbol !== "AVAX")
+        );
       return array;
     } catch (err) {
       console.log(err);
@@ -45,7 +53,15 @@ const AddressForm = () => {
           `56/address/${address}/balances_v2/?key=ckey_170bf62322044e829af0f052b6e`,
         method: "GET",
       });
-      let array = result.data.data.items.slice().filter((a) => a.contract_ticker_symbol === 'BNB').concat(result.data.data.items.slice(1).sort((a, b) => b.balance - a.balance).filter((a) => a.contract_ticker_symbol !=='BNB'));
+      let array = result.data.data.items
+        .slice()
+        .filter((a) => a.contract_ticker_symbol === "BNB")
+        .concat(
+          result.data.data.items
+            .slice(1)
+            .sort((a, b) => b.balance - a.balance)
+            .filter((a) => a.contract_ticker_symbol !== "BNB")
+        );
       return array;
     } catch (err) {
       console.log(err);
@@ -60,7 +76,15 @@ const AddressForm = () => {
           `1/address/${address}/balances_v2/?key=ckey_170bf62322044e829af0f052b6e`,
         method: "GET",
       });
-      let array = result.data.data.items.slice().filter((a) => a.contract_ticker_symbol === 'ETH').concat(result.data.data.items.slice(1).sort((a, b) => b.balance - a.balance).filter((a) => a.contract_ticker_symbol !=='ETH'));
+      let array = result.data.data.items
+        .slice()
+        .filter((a) => a.contract_ticker_symbol === "ETH")
+        .concat(
+          result.data.data.items
+            .slice(1)
+            .sort((a, b) => b.balance - a.balance)
+            .filter((a) => a.contract_ticker_symbol !== "ETH")
+        );
       return array;
     } catch (err) {
       console.log(err);
@@ -75,7 +99,15 @@ const AddressForm = () => {
           `137/address/${address}/balances_v2/?key=ckey_170bf62322044e829af0f052b6e`,
         method: "GET",
       });
-      let array = result.data.data.items.slice().filter((a) => a.contract_ticker_symbol === 'MATIC').concat(result.data.data.items.slice(1).sort((a, b) => b.balance - a.balance).filter((a) => a.contract_ticker_symbol !=='MATIC'));
+      let array = result.data.data.items
+        .slice()
+        .filter((a) => a.contract_ticker_symbol === "MATIC")
+        .concat(
+          result.data.data.items
+            .slice(1)
+            .sort((a, b) => b.balance - a.balance)
+            .filter((a) => a.contract_ticker_symbol !== "MATIC")
+        );
       return array;
     } catch (err) {
       console.log(err);
@@ -161,7 +193,7 @@ const AddressForm = () => {
         eth: [],
         polygon: [],
         avalanche: [],
-        binance: []
+        binance: [],
       });
       alert("Invalid Address!");
     } else {
@@ -197,7 +229,10 @@ const AddressForm = () => {
       {isLoading && <Loader />}
       {isShow && (
         <Fragment>
-          <label className={classes.output_label}> BALANCES OF {walletAddress}</label>
+          <label className={classes.output_label}>
+            {" "}
+            BALANCES OF {walletAddress}
+          </label>
           <div className={classes.output}>
             <Cart label={"ETHEREUM"}>{ethereumList(walletAddress)}</Cart>
             <Cart label={"AVALANCHE"}>{avaxList(walletAddress)}</Cart>
